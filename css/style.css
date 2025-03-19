@@ -226,17 +226,19 @@ p.slide-numbering.dark {
   background-position: right center;
   background-repeat: no-repeat;
   filter: brightness(0.9);
+  mask-image: linear-gradient(to left, rgba(5,31,41,1) 70em, rgba(5,31,41,0) 91em);
+  -webkit-mask-image: linear-gradient(to left, rgba(5,31,41,1) 70em, rgba(5,31,41,0) 91em);
 }
-.slide--1__left::after {
+/* .slide--1__left::after {
   content: '';
   position: absolute;
   top: 0;
-  right: 82em;
-  width: 10em;
+  left: 0;
+  width: calc(100% - 70em);
   height: 100%;
-  background: linear-gradient(90deg, rgba(5,31,41,1) 7%, rgba(5,31,41,0) 100%);
+  background: linear-gradient(90deg, rgba(5,31,41,1) 47%, rgba(5,31,41,0) 100%);
   z-index: -1;
-}
+} */
 .slide--1__left-content {
   display: flex;
   flex-direction: column;
@@ -887,7 +889,7 @@ p.slide-numbering.dark {
   justify-content: space-between;
   min-width: 88em;
   width: 84%;
-  height: calc(100% - 20em);
+  height: calc(100% - 26.5em);
   margin: 10em auto 0;
 }
 .slide--7__right-top h3 {
@@ -1034,15 +1036,15 @@ p.slide-numbering.dark {
 .slide--8__input input::-ms-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5em;
-  height: 5em;
+  width: 3em;
+  height: 3em;
   opacity: 0;
 }
 .slide--8__input .custom-thumb {
   position: absolute;
-  top: -2.1em;
+  top: -2.9em;
   left: -0.15em;
-  width: 5em;
+  width: 6.5em;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   cursor: pointer;
@@ -1220,6 +1222,10 @@ p.slide-numbering.dark {
 /*#region sl11*/
 .slide--11 {
   padding: 0;
+  padding-bottom: 8em;
+}
+.slide--11 .slide__content {
+  height: 100%;
 }
 .slide--11__left, .slide--11__right {
   width: 50%;
@@ -1244,13 +1250,19 @@ p.slide-numbering.dark {
 }
 
 .slide--11__right {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 6em;
+  height: calc(100% + 8em);
   background-image: url(../images/sl11-right.webp);
   background-position: top left;
   filter: brightness(0.95) contrast(1.05);
+}
+.slide--11__right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: max-content;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 11em;
 }
 .slide--11__blocks {
   position: relative;
@@ -1278,7 +1290,7 @@ p.slide-numbering.dark {
   font-size: 1.9em;
   text-align: right;
   width: 45em;
-  margin: 5em auto 0;
+  margin: 3em auto 0;
 }
 /*#endregion sl11*/
 
