@@ -193,8 +193,8 @@ p.slide-numbering.dark {
   left: 50%;
   transform: translateX(calc(-50% + 6em));
   height: 100vh;
-  width: max-content;
-  z-index: 1;
+  aspect-ratio: 1 / 3.6;
+  z-index: 2;
 }
 .slide--1__bottle img {
   height: 100%;
@@ -243,18 +243,18 @@ p.slide-numbering.dark {
   width: max-content;
   margin: 0 auto;
   height: calc(100% - 15em);
-  padding: 20em 3em 0 3em;
+  padding: 20em 3em 0 5em;
 }
 .slide--1__left h3 {
   font-size: 5em;
   margin-bottom: 0.5em;
 }
 .slide--1__left h2 {
-  font-size: 11em;
+  font-size: 10.3em;
   margin-bottom: 0.7em;
 }
 .slide--1__left ul li {
-  font-size: 4em;
+  font-size: 3.8em;
   margin-bottom: 1em;
 }
 .slide--1__left ul li:last-child {
@@ -268,7 +268,7 @@ p.slide-numbering.dark {
 
 .slide--1__right {
   margin-left: auto;
-  padding: 15em 9em 15em 10em;
+  padding: 15em 9em 15em 14em;
   width: calc(50% - 20em);
   background: linear-gradient(180deg, rgb(154 210 232) 0%, rgb(160 216 236) 34%, rgb(173 220 241) 60%, rgb(175 220 239) 100%);
 }
@@ -1028,6 +1028,15 @@ p.slide-numbering.dark {
   appearance: none;
   background: linear-gradient(to right, #002222 0%, transparent 0%);
   z-index: 2;
+}
+.slide--8__input input::-webkit-slider-thumb,
+.slide--8__input input::-moz-range-thumb,
+.slide--8__input input::-ms-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5em;
+  height: 5em;
+  opacity: 0;
 }
 .slide--8__input .custom-thumb {
   position: absolute;
